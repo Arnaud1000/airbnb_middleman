@@ -1,14 +1,8 @@
-<% members =["Franck", "Louis", "Damien"] %>
-<h2 class="text-center">Il y a <%= members.length %> membres </h2>
-<div class= "text-center">
-  <div class="container">
-    <div class="row">
-
-    <% members.each do |member| %>
-    <div class="col-xs-12 col-sm-4">
-      <img src="http://placehold.it/100x100" alt="" class="img-circle">
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+<ul class="list-inline text-center">
+  <% ["boris", "seb", "romain"].each do |member| %>
+    <li>
+      <%= image_tag "#{member}.png", class: "img-circle" %>
+      <h3><%= member.capitalize %></h3>
+    </li>
+  <% end %>
+</ul>
